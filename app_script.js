@@ -1,3 +1,6 @@
 function learnGoogleAppScript(params) {
-    Logger.log('hello world!');
+    var app = SpreadsheetApp;
+    var spreadsheet = app.getActiveSpreadsheet();
+    var activeSheet = spreadsheet.getActiveSheet();
+    activeSheet.getRange('A1').setValue("Hello World!");
 }
