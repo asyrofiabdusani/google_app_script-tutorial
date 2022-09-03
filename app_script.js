@@ -2,8 +2,11 @@ function learnGoogleAppScript() {
     var app = SpreadsheetApp;
     var spreadsheet = app.getActiveSpreadsheet();
     var activeSheet = spreadsheet.getActiveSheet();
+    activeSheet.getRange(1, 1).setValue(10);
     var result = activeSheet.getRange(1, 1).getValues();
-    for (i = 0; i < 10; i++) {
-        activeSheet.getRange(i + 1, 2).setValue(result);
+    if (result < 6) {
+        activeSheet.getRange(1, 2).setValue("Smalll");
+    } else {
+        activeSheet.getRange(1, 2).setValue("Big");
     }
 }
