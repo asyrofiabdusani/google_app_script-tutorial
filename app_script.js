@@ -1,12 +1,11 @@
 function learnGoogleAppScript() {
-    var app = SpreadsheetApp;
-    var spreadsheet = app.getActiveSpreadsheet();
-    var activeSheet = spreadsheet.getActiveSheet();
-    activeSheet.getRange(1, 1).setValue(10);
-    var result = activeSheet.getRange(1, 1).getValues();
-    if (result < 6) {
-        activeSheet.getRange(1, 2).setValue("Smalll");
-    } else {
-        activeSheet.getRange(1, 2).setValue("Big");
-    }
+    var activeSheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    activeSheet.getRange(1, 1);
+    var lastRow = activeSheet.getLastRow();
+    var lastCol = activeSheet.getLastColumn();
+    activeSheet.getRange(lastRow + 1, 1, 1, 2).setValue("new value");
+    activeSheet.getRange(lastRow + 1, lastCol + 1, 4, 2).setValue("new value");
+    Logger.log(lastRow);
+    Logger.log(lastCol);
 }
+
