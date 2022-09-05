@@ -9,3 +9,7 @@ This diagram shows steps to start to code in google app script
 *note : see the commit to know the step of code for this tutorial
 
 For adding button in the sheet, use drawing feature in sheet and adding script on it. Just need to write the the name of function.
+
+This is format of sheet for sending the email
+
+![image](https://user-images.githubusercontent.com/37644705/188427390-cfb0dd04-73db-4e18-bd25-3ea16722f934.png)
